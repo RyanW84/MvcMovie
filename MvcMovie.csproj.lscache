@@ -411,25 +411,27 @@ Program.cs
 obj/Debug/net10.0/MvcMovie.GeneratedMSBuildEditorConfig.editorconfig
 
 [additionalFiles]
-Views/Home/
- Index.cshtml
- Privacy.cshtml
-Views/Shared/
- Error.cshtml
- _Layout.cshtml
- _ValidationScriptsPartial.cshtml
 Views/
+ HelloWorld/Index.cshtml
+ Home/
+  Index.cshtml
+  Privacy.cshtml
+ Shared/
+  Error.cshtml
+  _Layout.cshtml
+  _ValidationScriptsPartial.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml
 
 [dynamicFiles]
-Views/Home/
- Index.cshtml
- Privacy.cshtml
-Views/Shared/
- Error.cshtml
- _Layout.cshtml
- _ValidationScriptsPartial.cshtml
 Views/
+ HelloWorld/Index.cshtml
+ Home/
+  Index.cshtml
+  Privacy.cshtml
+ Shared/
+  Error.cshtml
+  _Layout.cshtml
+  _ValidationScriptsPartial.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml
