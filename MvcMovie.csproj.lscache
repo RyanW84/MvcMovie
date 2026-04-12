@@ -60,7 +60,9 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 Controllers/
  HelloWorldController.cs
  HomeController.cs
-Models/ErrorViewModel.cs
+Models/
+ ErrorViewModel.cs
+ Movie.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  MvcMovie.AssemblyInfo.cs
@@ -411,27 +413,31 @@ Program.cs
 obj/Debug/net10.0/MvcMovie.GeneratedMSBuildEditorConfig.editorconfig
 
 [additionalFiles]
+Views/HelloWorld/
+ Index.cshtml
+ Welcome.cshtml
+Views/Home/
+ Index.cshtml
+ Privacy.cshtml
+Views/Shared/
+ Error.cshtml
+ _Layout.cshtml
+ _ValidationScriptsPartial.cshtml
 Views/
- HelloWorld/Index.cshtml
- Home/
-  Index.cshtml
-  Privacy.cshtml
- Shared/
-  Error.cshtml
-  _Layout.cshtml
-  _ValidationScriptsPartial.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml
 
 [dynamicFiles]
+Views/HelloWorld/
+ Index.cshtml
+ Welcome.cshtml
+Views/Home/
+ Index.cshtml
+ Privacy.cshtml
+Views/Shared/
+ Error.cshtml
+ _Layout.cshtml
+ _ValidationScriptsPartial.cshtml
 Views/
- HelloWorld/Index.cshtml
- Home/
-  Index.cshtml
-  Privacy.cshtml
- Shared/
-  Error.cshtml
-  _Layout.cshtml
-  _ValidationScriptsPartial.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml
