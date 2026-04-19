@@ -62,9 +62,14 @@ Controllers/
  HomeController.cs
  MoviesController.cs
 Data/MvcMovieContext.cs
+Migrations/
+ 20260419145125_InitialCreate.cs
+ 20260419145125_InitialCreate.Designer.cs
+ MvcMovieContextModelSnapshot.cs
 Models/
  ErrorViewModel.cs
  Movie.cs
+ SeedData.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  MvcMovie.AssemblyInfo.cs

@@ -5,14 +5,9 @@ using MvcMovie.Models;
 
 namespace MvcMovie.Controllers
 {
-    public class MoviesController : Controller
+    public class MoviesController(MvcMovieContext context) : Controller
     {
-        private readonly MvcMovieContext _context;
-
-        public MoviesController(MvcMovieContext context)
-        {
-            _context = context;
-        }
+        private readonly MvcMovieContext _context = context;
 
         // GET: Movies
         public async Task<IActionResult> Index()
@@ -28,8 +23,7 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var movie = await _context.Movie.FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
                 return NotFound();
@@ -49,7 +43,9 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create(
+            [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie
+        )
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +77,10 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Edit(
+            int id,
+            [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie
+        )
         {
             if (id != movie.Id)
             {
@@ -119,8 +118,7 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var movie = await _context.Movie.FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
                 return NotFound();
